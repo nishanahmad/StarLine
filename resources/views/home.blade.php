@@ -20,25 +20,24 @@
 <div class="row content-panel">
 	<div class="col-md-12">
 		<h2 style="margin-left:30px;"><i class="fa fa-credit-card"></i> Pending Orders</i></h2>
-		<h3 style="margin-left:60px;">
-		@if(isset($from))
-			@if(isset($to)) 
-				{{$from}}
-			@else
-				From {{$from}}
-			@endif
-		@endif
-		@if(isset($to))
-			to {{$to}}
-		@endif
-		</h3>
-		<h4 style="margin-left:30%;">
-			Invoiced : <b>-<input style="border:0;" type="text" class="invoiced"/></b>
-			Slipped : <b><input style="border:0;" type="text" class="slipped"/></b>
-		</h4>	
-		<h4 style="margin-left:30%;">
-			Orders : <b><input style="border:0;" type="text" class="orderQty"/></b>
-			Pending : <b><input style="border:0;" type="text" class="total"/></b>
+		<h4>
+		<table align="center">
+			<tr>
+				<td colspan="4" style="text-align:center;">Orders : <b><input style="border:0;" type="text" class="orderQty"/></b></td>
+			</tr>
+			<tr>
+				<td>Invoiced </td>
+				<td>: <b><input style="border:0;" type="text" class="invoiced"/></b></td>
+				<td>Slipped </td>
+				<td>: <b><input style="border:0;" type="text" class="slipped"/></b></td>
+			</tr>			
+			<tr>
+				<td>Pending Invoices </td> 
+				<td>: <b><input style="border:0;" type="text" class="pendingInvoices"/></b></td>
+				<td>Pending Slips </td>
+				<td>: <b><input style="border:0;" type="text" class="pendingSlips"/></b></td>
+			</tr>						
+		</table>
 		</h4>
 	</div>
 </div>
@@ -115,7 +114,8 @@ $(document).ready(function() {
 			$(".orderQty").val(api.column( 5, {page:'current'} ).data().sum());
 			$(".invoiced").val(api.column( 6, {page:'current'} ).data().sum());
 			$(".slipped").val(api.column( 7, {page:'current'} ).data().sum());
-			$(".total").val($(".slipped").val()-$(".invoiced").val());
+			$(".pendingInvoices").val($(".orderQty").val()-$(".invoiced").val());
+			$(".pendingSlips").val($(".orderQty").val()-$(".slipped").val());
 		}
 	});
 		
