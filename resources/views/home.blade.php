@@ -17,10 +17,6 @@
 	});
 </script>
 @endif
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-<script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
-<script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.19/api/sum().js"></script>
 <div class="row content-panel">
 	<div class="col-md-12">
 		<h2 style="margin-left:30px;"><i class="fa fa-credit-card"></i> Pending Orders</i></h2>

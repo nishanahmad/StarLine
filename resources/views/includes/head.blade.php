@@ -27,6 +27,10 @@
 <script type="text/javascript" src="{{ asset('js/bootbox.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/bootstrapAlert.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/datatables.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/datetime-moment.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/sum().js') }}"></script>
 <script class="include" type="text/javascript" src="{{ asset('js/jquery.dcjqaccordion.2.7.js') }}"></script>
 <style>
 body{
