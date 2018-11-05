@@ -23,19 +23,19 @@
 		<h4>
 		<table align="center">
 			<tr>
-				<td colspan="4" style="text-align:center;">Orders : <b><input style="border:0;" type="text" class="orderQty"/></b></td>
+				<td colspan="4" style="text-align:center;">Orders : <b><input readonly style="border:0;" type="text" class="orderQty"/></b></td>
 			</tr>
 			<tr>
 				<td>Invoiced </td>
-				<td>: <b><input style="border:0;" type="text" class="invoiced"/></b></td>
+				<td>: <b><input readonly style="border:0;" type="text" class="invoiced"/></b></td>
 				<td>Slipped </td>
-				<td>: <b><input style="border:0;" type="text" class="slipped"/></b></td>
+				<td>: <b><input readonly style="border:0;" type="text" class="slipped"/></b></td>
 			</tr>			
 			<tr>
 				<td>Pending Invoices </td> 
-				<td>: <b><input style="border:0;" type="text" class="pendingInvoices"/></b></td>
+				<td>: <b><input readonly style="border:0;" type="text" class="pendingInvoices"/></b></td>
 				<td>Pending Slips </td>
-				<td>: <b><input style="border:0;" type="text" class="pendingSlips"/></b></td>
+				<td>: <b><input readonly style="border:0;" type="text" class="pendingSlips"/></b></td>
 			</tr>						
 		</table>
 		</h4>

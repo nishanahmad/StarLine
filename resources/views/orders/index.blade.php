@@ -29,7 +29,7 @@ $(document).ready(function() {
 	<p class="alert alert-danger">{{ $error }}</p>
 @endforeach	
 <div class="row content-panel">
-	<form class="form-horizontal style-form"  action="/orders" method="post" autocomplete="off">
+	<form class="form-horizontal style-form"  action="/searchOrders" method="post" autocomplete="off">
 		<input type="hidden" name="_token" value="{!! csrf_token() !!}">	
 		<div class="form-group">
 			<div class="col-md-3 col-md-offset-2">

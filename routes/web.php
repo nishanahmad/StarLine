@@ -12,8 +12,8 @@
 */
 
 Route::resource('orders', 'OrdersController');
-Route::post('orders', 'OrdersController@search');
 Route::post('orders/{id}', 'OrdersController@update');
+Route::post('searchOrders', 'OrdersController@search');
 Route::resource('invoices', 'InvoiceController');
 Route::get('invoices/create/{orderId}', 'InvoiceController@create');
 Route::resource('slips', 'SlipController');

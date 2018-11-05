@@ -1,6 +1,6 @@
 <div id="sidebar" class="nav-collapse ">
 	<ul class="sidebar-menu" id="nav-accordion">
-	  <p class="centered"><a href="profile.html"><img src="{{ asset('images/ui-nishan.jpg') }}" class="img-circle" width="80"></a></p>
+	  <p class="centered"><a href="#"><img src="{{ asset('images/ui-nishan.jpg') }}" class="img-circle" width="80"></a></p>
 	  <h5 class="centered">{{ Auth::user()->name }}</h5>
 	  <li class="mt">
 		<a class="{{ Request::is('/') || Request::is('home') ? 'active' : '' }}" href="/home">

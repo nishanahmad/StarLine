@@ -16,6 +16,12 @@
 	});
 </script>
 @endif    
+<script>
+$(document).ready(function() {
+		var pickerOpts = { dateFormat:"dd-mm-yy"}; 					
+		$( "#datepicker" ).datepicker(pickerOpts);
+	});	
+</script>   
 <section class="wrapper">
 	<h2><i class="fa fa-file-text" style="margin-right:.5em;margin-left:.5em;"></i>New Godown Slip</h3>
 	@foreach ($errors->all() as $error)
@@ -32,9 +38,9 @@
 						<label class="col-sm-2 col-sm-2 control-label">Date</label>
 						<div class="col-sm-6">
 							@if(old('date') != null)
-								<input type="date" name="date" value="{{old('date')}}" class="form-control" tabindex="1" required>
+								<input type="text" name="date" value="{{old('date')}}" class="form-control"  id="datepicker" tabindex="1" required>
 							@else
-								<input type="date" name="date" value="{{$today}}" class="form-control" tabindex="1" required>
+								<input type="text" name="date" value="{{date('d-m-Y',strtotime($today))}}" class="form-control" id="datepicker" tabindex="1" required>
 							@endif
 						</div>
 					</div>

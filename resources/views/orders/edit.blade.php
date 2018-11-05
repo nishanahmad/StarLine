@@ -16,6 +16,12 @@
 	});
 </script>
 @endif
+<script>
+$(document).ready(function() {
+		var pickerOpts = { dateFormat:"dd-mm-yy"}; 					
+		$( "#datepicker" ).datepicker(pickerOpts);
+	});	
+</script>   
 <section class="wrapper">
 	<h2><i class="fa fa-credit-card" style="margin-right:.5em;margin-left:.5em;"></i>Edit Order</h3>
 	@foreach ($errors->all() as $error)
@@ -32,7 +38,7 @@
 					<div class="form-group">
 						<label class="col-sm-2 col-sm-2 control-label">Date</label>
 						<div class="col-sm-6">
-							<input type="date" name="date" value="{{$order->date}}" class="form-control" required>
+							<input type="text" id="datepicker" name="date" value="{{$order->date}}" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">

@@ -42,7 +42,7 @@ class SlipController extends Controller
 		$order = Order::whereId($request->get('order'))->firstOrFail();
 		
 		$slip = new Slip(array(
-			'date' => $request->get('date'),		
+			'date' => date('Y-m-d',strtotime($request->get('date'))),
 			'order_id' => $order->id,		
 			'qty' => $request->get('qty'),
 			'number' => $request->get('number'),

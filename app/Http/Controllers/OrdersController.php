@@ -100,7 +100,7 @@ class OrdersController extends Controller
 			
 		try{
 			$order->save();	
-			return redirect('orders')->with('success', 'Order has been succesfully created!');
+			return redirect('orders/'.$order->id)->with('success', 'Order has been succesfully created!');
 		}	
 		catch(\Exception $e){
 			return redirect()-> back() ->with('error', 'Error!!! Please contact admin with this message : '.$e->getMessage());			
@@ -147,7 +147,7 @@ class OrdersController extends Controller
 		}	
 		catch(\Illuminate\Database\QueryException $e){
 			return redirect()->back()->with('error', 'Error!!! Please contact admin with the following error detail :<br><br>'.$e->getMessage());								
-		}											
+		}
     }			
 
     public function destroy($id)
