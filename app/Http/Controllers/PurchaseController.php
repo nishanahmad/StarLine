@@ -38,7 +38,7 @@ class PurchaseController extends Controller
     public function store(PurchaseFormRequest $request)
     {
 		$purchase = new Purchase(array(
-			'date' => $request->get('date'),		
+			'date' => date('Y-m-d',strtotime($request->get('date'))),
 			'item_id' => $request->get('item'),			
 			'qty' => $request->get('qty'),
 			'number' => $request->get('number'),

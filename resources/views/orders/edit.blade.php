@@ -38,7 +38,7 @@ $(document).ready(function() {
 					<div class="form-group">
 						<label class="col-sm-2 col-sm-2 control-label">Date</label>
 						<div class="col-sm-6">
-							<input type="text" id="datepicker" name="date" value="{{$order->date}}" class="form-control" required>
+							<input type="text" id="datepicker" name="date" value="{{date('d-m-Y',strtotime($order->date))}}" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">

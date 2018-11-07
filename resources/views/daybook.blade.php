@@ -43,7 +43,7 @@ function refresh()
 		<div class="col-lg-12">
 			<div class="content-panel">
 			<h4><i class="fa fa-file-text"></i> Slips</h4>
-			<section id="unseen">
+			<section style="margin:40px;">
 				<table class="table table-bordered table-condensed">
 					<thead>
 						<tr>
@@ -74,7 +74,7 @@ function refresh()
 		<div class="col-lg-12">
 			<div class="content-panel">
 			<h4><i class="fa fa-truck"></i> Purchases</h4>
-			<section id="unseen">
+			<section style="margin:40px;">
 				<table class="table table-bordered table-condensed">
 					<thead>
 						<tr>
@@ -105,7 +105,7 @@ function refresh()
 		<div class="col-lg-12">
 			<div class="content-panel">
 				<h4><i class="fa fa-inr"></i> Invoices</h4>
-				<section id="no-more-tables">
+				<section style="margin:40px;">
 					<table class="table table-bordered table-condensed cf">
 						<thead class="cf">
 							<tr>

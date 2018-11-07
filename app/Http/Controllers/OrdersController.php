@@ -90,7 +90,7 @@ class OrdersController extends Controller
     public function store(OrderFormRequest $request)
     {
 		$order = new Order(array(
-			'date' => $request->get('date'),		
+			'date' => date('Y-m-d',strtotime($request->get('date'))),
             'client_id' => $request->get('client'),
 			'item_id' => $request->get('item'),			
 			'qty' => $request->get('qty'),
@@ -128,7 +128,7 @@ class OrdersController extends Controller
     public function update(OrderFormRequest $request, $id)
     {
 		$order = Order::whereId($id)->firstOrFail();
-		$order -> date = $request->get('date');
+		$order -> date =  date('Y-m-d',strtotime($request->get('date')));
 		$order -> client_id = $request->get('client');
 		$order -> item_id = $request->get('item');
 		$order -> qty = $request->get('qty');

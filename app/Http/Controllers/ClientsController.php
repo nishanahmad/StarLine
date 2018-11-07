@@ -38,8 +38,15 @@ class ClientsController extends Controller
 				$clientMap[$invoice->order->client->name] = $clientMap[$invoice->order->client->name] - $invoice->qty;
 			else
 				$clientMap[$invoice->order->client->name] = -$invoice->qty;
-		}		
+		}
+		
+		foreach($clientMap as $client => $qty)	
+		{
+			if($qty ==0)
+				unset($clientMap[$client]);
+		}
 		ksort($clientMap);
+		
 		return view('clients.balance',compact('clientMap'));
     }    
 }

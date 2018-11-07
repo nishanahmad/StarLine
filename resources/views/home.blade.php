@@ -51,8 +51,7 @@
 				<input type="text" data-column="5"  style="border-left:20px;" class="form-control" placeholder="Qty">	
 				<input type="text" data-column="8"  style="border-left:20px;" class="form-control" placeholder="Invoice/Slip">					
 			</form>	
-			<br/><br/>
-			<section id="no-more-tables">
+			<section style="margin:40px;">
 				<table class="table table-bordered table-striped table-condensed cf" id="orders">
 					<thead class="cf">
 						<tr>
@@ -105,7 +104,7 @@ $(document).ready(function() {
 	$.fn.dataTable.moment( 'DD-MM-YYYY' );
 
 	var table = $('#orders').DataTable({
-		"iDisplayLength": 3000,
+		"iDisplayLength": 10000,
 		"columnDefs": [
 						{ "visible": false, "targets": 8 }
 					  ],

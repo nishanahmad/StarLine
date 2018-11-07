@@ -17,13 +17,9 @@
 	});
 </script>
 @endif
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-<script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
-<script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.19/api/sum().js"></script>
 <div class="row content-panel">
 	<div class="col-md-12">
-		<h2 style="margin-left:30px;"><i class="fa fa-credit-card"></i> Orders <i class="fa fa-angle-right"></i> {{$client->name}}</h2>
+		<h2 style="margin-left:30px;"><i class="fa fa-credit-card"></i> <a href="/orders" style="color:black;">Search orders</a> <i class="fa fa-angle-right"></i> {{$client->name}}</h2>
 		<h3 style="margin-left:60px;">
 		@if(isset($from))
 			@if(isset($to)) 
@@ -39,19 +35,19 @@
 		<h4>
 		<table align="center">
 			<tr>
-				<td colspan="4" style="text-align:center;">Orders : <b><input style="border:0;" type="text" class="orderQty"/></b></td>
+				<td colspan="4" style="text-align:center;">Orders : <b><input style="border:0;" readonly type="text" class="orderQty"/></b></td>
 			</tr>
 			<tr>
 				<td>Invoiced </td>
-				<td>: <b><input style="border:0;" type="text" class="invoiced"/></b></td>
+				<td>: <b><input style="border:0;" readonly type="text" class="invoiced"/></b></td>
 				<td>Slipped </td>
-				<td>: <b><input style="border:0;" type="text" class="slipped"/></b></td>
+				<td>: <b><input style="border:0;" readonly type="text" class="slipped"/></b></td>
 			</tr>			
 			<tr>
 				<td>Pending Invoices </td> 
-				<td>: <b><input style="border:0;" type="text" class="pendingInvoices"/></b></td>
+				<td>: <b><input style="border:0;" readonly type="text" class="pendingInvoices"/></b></td>
 				<td>Pending Slips </td>
-				<td>: <b><input style="border:0;" type="text" class="pendingSlips"/></b></td>
+				<td>: <b><input style="border:0;" readonly type="text" class="pendingSlips"/></b></td>
 			</tr>						
 		</table>
 		</h4>
@@ -67,9 +63,9 @@
 				<input type="text" data-column="8"  style="border-left:20px;" class="form-control" placeholder="Invoice/Slip">					
 				<input type="text" data-column="9"  style="border-left:20px;" class="form-control" placeholder="Status">					
 			</form>	
-			<br/><br/>
-			<section id="no-more-tables">
-				<table class="table table-bordered table-striped table-condensed cf" id="orders">
+			
+			<section style="margin:40px;">
+				<table class="table table-bordered table-condensed cf" id="orders">
 					<thead class="cf">
 						<tr>
 							<th style="width:7%;"/>
@@ -121,7 +117,7 @@ $(document).ready(function() {
 	$.fn.dataTable.moment( 'DD-MM-YYYY' );
 
 	var table = $('#orders').DataTable({
-		"iDisplayLength": 3000,
+		"iDisplayLength": 10000,
 		"columnDefs": [
 						{ "visible": false, "targets": 8 }
 					  ],
