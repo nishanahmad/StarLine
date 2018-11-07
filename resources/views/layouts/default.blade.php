@@ -5,8 +5,8 @@
 </head>
 <body>
 <section id="container">
+@include('includes.header')
 @if(Auth::check())
-	@include('includes.header')
     <aside>
       <div id="sidebar" class="nav-collapse ">
 			@include('includes.sidebar')
